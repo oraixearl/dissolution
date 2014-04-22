@@ -105,6 +105,10 @@
 #define NFC_GPIO_WAKE PM8921_GPIO_PM_TO_SYS(8)
 #define NFC_GPIO_IRQ 32
 
+#ifdef CONFIG_CPU_FREQ_GOV_UBERDEMAND
+int set_second_phase_freq(int cpufreq);
+#endif
+ 
 static int config_nfc_gpio(void)
 {
 	int ret;
